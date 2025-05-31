@@ -1,17 +1,17 @@
 import time
 import os
 from telethon.sync import TelegramClient
+from telethon.errors import FloodWaitError
 from dotenv import load_dotenv
 
-# Load API credentials from .env
+# Load environment variables
 load_dotenv()
-api_id = int(os.getenv("API_ID"))
-api_hash = os.getenv("API_HASH")
 
-# Telegram group or channel (use exact @username or invite link if public)
-target_group = 'https://t.me/POGOENCODERJOBHIRING'
+# Your Telegram credentials
+api_id = int(os.getenv('API_ID'))
+api_hash = os.getenv('API_HASH')
 
-# Crypto Casino Promo Message
+# Message you want to send
 message = """🎰 LEGIT CRYPTO CASINO + FREE BONUS! 🎁
 Looking for a trusted play-to-earn crypto game?
 🔥 BC.Game is 100% legit — with real payouts, fast crypto withdrawals, and tons of games (slots, crash, roulette, etc.)
@@ -30,17 +30,22 @@ OR
 🚀 Join the hype and start winning crypto today!
 💬 DM me if you need help getting started. Happy to guide!
 
-#BCGame #CryptoCasino #PlayToEarn #CryptoBonus #LegitRaket #FreeCrypto #OnlineCasino #BTCbonus
-"""
+#BCGame #CryptoCasino #PlayToEarn #CryptoBonus #LegitRaket #FreeCrypto #OnlineCasino #BTCbonus"""
 
-# Start sending loop
+# Telegram group usernames
+groups = ['@pogohiringg', '@POGOENCODERJOBHIRING',"@sonchi2203","@hiringOFM","@whalesofmjobs"]
+
+# Start the client
 with TelegramClient('user_session', api_id, api_hash) as client:
     while True:
-        try:
-            group = client.get_entity(target_group)
-            client.send_message(group, message)
-            print("✅ Message sent! Waiting 60 seconds...")
-            time.sleep(60)
-        except Exception as e:
-            print(f"❌ Error: {e}")
-            break
+        for group in groups:
+            try:
+                client.send_message(group, message)
+                print(f"✅ Message sent to {group}")
+            except FloodWaitError as e:
+                print(f"⏱️ Rate limited. Waiting {e.seconds} seconds.")
+                time.sleep(e.seconds)
+            except Exception as e:
+                print(f"❌ Failed to send to {group}: {e}")
+        print("⏳ Sleeping 10 minutes...")
+        time.sleep(30)  # Wait 10 minutes before sending again
