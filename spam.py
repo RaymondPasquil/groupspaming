@@ -12,25 +12,10 @@ api_id = int(os.getenv('API_ID'))
 api_hash = os.getenv('API_HASH')
 
 # Message you want to send
-message = """🎰 LEGIT CRYPTO CASINO + FREE BONUS! 🎁
-Looking for a trusted play-to-earn crypto game?
-🔥 BC.Game is 100% legit — with real payouts, fast crypto withdrawals, and tons of games (slots, crash, roulette, etc.)
-
-💸 Get FREE rewards when you register using my link or referral code!
-✅ Daily bonus spins
-✅ Welcome packages
-✅ Up to 1 BTC bonus!
-
-🎯 Sign Up Now:
-🔗 https://bcgame0.com/i-3bw1uxxla-n/
-
-OR
-🆔 Use Referral Code: 3bw1uxxla at registration!
-
-🚀 Join the hype and start winning crypto today!
-💬 DM me if you need help getting started. Happy to guide!
-
-#BCGame #CryptoCasino #PlayToEarn #CryptoBonus #LegitRaket #FreeCrypto #OnlineCasino #BTCbonus"""
+message = """🎁 Get FREE $UNI Tokens – No KYC, No BS!
+💸 Just sign up and start earning instantly.
+⏳ Limited spots. Don’t miss out.
+👉 Claim Your Airdrop Now https://unich.com/en/airdrop/sign-up?ref=I9K54H """
 
 # Telegram group usernames
 groups = ['@pogohiringg', '@POGOENCODERJOBHIRING',"@sonchi2203","@hiringOFM","@whalesofmjobs"]
