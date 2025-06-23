@@ -12,10 +12,15 @@ api_id = int(os.getenv('API_ID'))
 api_hash = os.getenv('API_HASH')
 
 # Message you want to send
-message = """🎁 Get FREE $UNI Tokens – No KYC, No BS!
-💸 Just sign up and start earning instantly.
-⏳ Limited spots. Don’t miss out.
-👉 Claim Your Airdrop Now https://unich.com/en/airdrop/sign-up?ref=I9K54H """
+message = """🚨 LIMITED ACCESS ALERT 🚨
+Want exclusive content from Ximena Mendez? 💋
+Her private world is now open — but only for a short time.
+
+🔥 Early access, spicy surprises, and no filters.
+💎 Get in before the doors close:
+👉 https://whop.com/ximena-mendez?a=topwingman
+
+⏳ Don’t wait. This is your invite — she’s waiting."""
 
 # Telegram group usernames
 groups = ['@pogohiringg', '@POGOENCODERJOBHIRING',"@sonchi2203","@hiringOFM","@whalesofmjobs"]
